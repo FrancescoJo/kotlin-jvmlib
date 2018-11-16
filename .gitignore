@@ -1,0 +1,18 @@
+# System-dependent autogen file
+.DS_Store
+desktop.ini
+
+# Build outputs
+.gradle
+build
+out
+
+# IDE specific files
+.idea
+.project
+
+# Used in development
+version.properties
+/application-*.yml
+keystore.p12
+application.yml
