@@ -10,4 +10,6 @@ jar {
 dependencies {
     compile "com.google.code.findbugs:jsr305:3.0.2"
     compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.0"
+
+    testCompile "com.github.FrancescoJo:kotlin-jvmlib-test:1.0.0"
 }
