@@ -93,8 +93,10 @@ private fun parseZoneOffset(zoneOffset: ZoneOffset): IntArray {
     }
 }
 
-// Do not use this method after year 2038
-fun utcLocalDateTimeOf(timestamp: Int): LocalDateTime =
+/**
+ * Do not use this method after year 2038 if timestamp is 4 bytes long only.
+ */
+fun utcLocalDateTimeOf(timestamp: Number): LocalDateTime =
         utcLocalDateTimeOf(timestamp.toLong())
 
 fun utcLocalDateTimeOf(timestamp: Long): LocalDateTime = if (timestamp > Integer.MAX_VALUE) {
