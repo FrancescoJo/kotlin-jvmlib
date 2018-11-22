@@ -101,18 +101,6 @@ fun Boolean.toYn(): String {
  * Due to its nature, consider not calling this function in your production codes.
  */
 fun indentToString(target: Any?): String {
-//    var level = 0
-//    var entryPointFound = false
-//    Thread.currentThread().stackTrace.forEach {
-//        if (it.methodName == "indentToString") {
-//            entryPointFound = true
-//        }
-//        if (entryPointFound && it.methodName == "toString") {
-//            entryPointFound = false
-//            level++
-//        }
-//    }
-
     val indents = "  "
     val str = target.toString()
     val split = str.split("\n")

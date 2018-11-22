@@ -104,3 +104,9 @@ fun <T : Comparable<T>> List<T>.findInsertPosition(input: T): Int {
 
     return low
 }
+
+fun <T> Collection<T>?.firstOrDefault(defaultProvider: () -> T): T = if (this.isNullOrEmpty()) {
+    defaultProvider.invoke()
+} else {
+    this!!.first()
+}
